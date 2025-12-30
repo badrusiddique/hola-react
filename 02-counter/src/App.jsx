@@ -8,6 +8,11 @@ function App() {
 
 
   const handleIncrementInBatch = () => {
+    // THIS will only run the last one as it executes in batch, so the counter will only increase by 1
+    // setCounter(counter + 1);
+    // setCounter(counter + 1);
+    // setCounter(counter + 1);
+
     setCounter((prev) => { console.log(prev); return prev + 1; });
     setCounter((prev) => { console.log(prev); return prev + 1; });
     setCounter((prev) => { console.log(prev); return prev + 1; });
