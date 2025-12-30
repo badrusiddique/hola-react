@@ -6,6 +6,13 @@ function App() {
   const handleIncrement = () => setCounter(counter + 1);
   const handleDecrement = () => counter > 0 && setCounter(counter - 1);
 
+
+  const handleIncrementInBatch = () => {
+    setCounter((prev) => { console.log(prev); return prev + 1; });
+    setCounter((prev) => { console.log(prev); return prev + 1; });
+    setCounter((prev) => { console.log(prev); return prev + 1; });
+  };
+
   return (
     <>
       <h2>02-counter</h2>
