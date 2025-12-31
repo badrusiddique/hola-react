@@ -1,8 +1,6 @@
-import { useState, useEffect, useCallback, useRef } from 'react'
+import { useState, useEffect } from 'react'
 
-function App() {
-  const passwordRef = useRef(null);
-
+function AppWithoutMemo() {
   const [password, setPassword] = useState("");
   const [passwordLen, setPasswordLen] = useState(7);
   const [includeNum, setIncludeNum] = useState(false);
@@ -24,36 +22,30 @@ function App() {
     }).join('');
   };
 
-  const handlePasswordGenerate = useCallback(() => {
+  const handlePasswordGenerate = () => {
     const newPassword = generateRandomPassword(passwordLen, includeNum, includeSpecialChar);
     setPassword(newPassword);
-  }, [passwordLen, includeNum, includeSpecialChar, setPassword]);
+  };
 
-  const handleCopy = useCallback(() => {
-    if (passwordRef.current) {
-      const range = document.createRange();
-      range.selectNodeContents(passwordRef.current);
-      window.getSelection().removeAllRanges();
-      window.getSelection().addRange(range);
-    }
+  const handleCopy = () => {
     navigator.clipboard.writeText(password);
     console.log("Password copied to clipboard");
-  }, [password]);
+  };
 
   useEffect(() => {
     handlePasswordGenerate();
-  }, [passwordLen, includeNum, includeSpecialChar, handlePasswordGenerate]);
+  }, [passwordLen, includeNum, includeSpecialChar]);
 
   return (
     <div className="flex justify-center">
       <div className="bg-gray-300 h-36 w-2xl m-4 rounded-lg">
         <div className="p-4 flex">
-          <label className="flex-1 bg-white rounded-s-lg text-orange-500 text-center p-2" ref={passwordRef}>{password}</label>
+          <label className="flex-1 bg-white rounded-s-lg text-orange-500 text-center p-2">{password}</label>
           <button className="bg-blue-400 rounded-r-lg w-15 h-10 hover:cursor-pointer" onClick={handleCopy}>COPY</button>
         </div>
         <div className="flex justify-left pl-4">
           <div className="text-orange-500">
-            <input type="range" min="7" max="64" value={passwordLen} onChange={(e) => setPasswordLen(e.target.value)}></input>
+            <input type="range" min="1" max="16" value={passwordLen} onChange={(e) => setPasswordLen(e.target.value)}></input>
             <label className="p-2">Length ({passwordLen})</label>
           </div>
           <div className="text-orange-500">
@@ -70,4 +62,4 @@ function App() {
   )
 }
 
-export default App
+export default AppWithoutMemo
