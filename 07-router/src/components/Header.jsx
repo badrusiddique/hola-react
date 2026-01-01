@@ -1,7 +1,13 @@
 import React from "react";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
+
+    const getActiveNavLinkClass = ({ isActive }) => {
+        return `text-gray-800 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none ${isActive ? "text-orange-600" : ""}`;
+    };
+
+
     return (
         <header className="shadow sticky z-50 top-0">
             <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
@@ -13,7 +19,7 @@ const Header = () => {
                             alt="Logo"
                         />
                     </Link>
-                    <div className="flex items-center lg:order-2">
+                    {/* <div className="flex items-center lg:order-2">
                         <Link
                             to="/"
                             className="text-gray-800 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
@@ -38,6 +44,32 @@ const Header = () => {
                         >
                             Github
                         </Link>
+                    </div> */}
+                    <div className="flex items-center lg:order-2">
+                        <NavLink
+                            to="/"
+                            className={getActiveNavLinkClass}
+                        >
+                            Home
+                        </NavLink>
+                        <NavLink
+                            to="/about"
+                            className={getActiveNavLinkClass}
+                        >
+                            About
+                        </NavLink>
+                        <NavLink
+                            to="/contact"
+                            className={getActiveNavLinkClass}
+                        >
+                            Contact
+                        </NavLink>
+                        <NavLink
+                            to="/github/badrusiddique?repository=hola-react"
+                            className={getActiveNavLinkClass}
+                        >
+                            Github
+                        </NavLink>
                     </div>
                     <div className="flex items-center lg:order-2">
                         <Link

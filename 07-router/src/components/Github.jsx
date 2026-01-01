@@ -1,4 +1,4 @@
-import { useParams, useSearchParams } from 'react-router';
+import { useParams, useSearchParams } from 'react-router-dom';
 import Header from './Header'
 import Footer from './Footer'
 
@@ -11,9 +11,9 @@ function Github() {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <h1 className="text-center text-2xl font-bold p-4">Github: "{userName}" with "{searchParams.get('repository')}" repository</h1>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
