@@ -93,6 +93,25 @@ A collection of React learning projects progressing from basic concepts to advan
 
 ---
 
+### [07 React Router](./07-router)
+**Concept**: Client-side routing and navigation in React applications
+
+**What you'll learn**:
+- Setting up React Router with `createBrowserRouter`
+- Creating nested routes with `Outlet`
+- Using `Link` and `NavLink` for navigation
+- Dynamic routing with URL parameters (`useParams`)
+- Query parameters with `useSearchParams`
+- Layout components for consistent UI structure
+- Active link styling with `NavLink`
+- Lazy loading routes for code splitting
+- Alternative routing configurations (`createRoutesFromElements`)
+- Building multi-page applications with React
+
+**Tech**: React, Vite, React Router DOM, Tailwind CSS
+
+---
+
 ## Getting Started
 
 Each project is self-contained with its own README. To run any project:
@@ -101,7 +120,6 @@ Each project is self-contained with its own README. To run any project:
 # Navigate to the project folder
 cd 0X-project-name
 
-6. **API integration & async** → Currency Converter
 # Install dependencies
 npm install
 
@@ -120,12 +138,15 @@ The projects are ordered progressively:
 3. **Master props and styling** → Tailwind Props
 4. **Build interactive UIs** → Background Color Changer  
 5. **Advanced hooks** → Password Generator
+6. **API integration & async** → Currency Converter
+7. **Client-side routing** → React Router
 
 ## Technologies Used
 
 - **React 18** - UI library
 - **Vite** - Build tool and dev server
 - **Tailwind CSS** - Utility-first CSS framework
+- **React Router DOM** - Client-side routing
 - **ESLint** - Code linting
 
 ## Repository Structure
@@ -136,8 +157,9 @@ hola-react/
 ├── 02-counter/               # useState basics
 ├── 03-tailwind-props/        # Props and Tailwind
 ├── 04-bg-color-changer/      # Interactive state management
-├── 06-currency-converter/    # API integration & async
 ├── 05-password-generator/    # Advanced hooks
+├── 06-currency-converter/    # API integration & async
+├── 07-router/                # React Router & navigation
 └── README.md                 # This file
 ```
 
