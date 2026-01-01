@@ -75,6 +75,24 @@ A collection of React learning projects progressing from basic concepts to advan
 
 ---
 
+### [06 Currency Converter](./06-currency-converter)
+**Concept**: API integration, async operations, and real-time data handling
+
+**What you'll learn**:
+- Fetching data from external APIs with `fetch`
+- `useMemo` for expensive computations
+- `useCallback` with async functions
+- Managing multiple dependent states
+- Handling API responses and data transformation
+- Component communication with props
+- Swap functionality between inputs
+- Working with dynamic dropdown options
+- Real-time currency conversion
+
+**Tech**: React, Vite, Tailwind CSS, Currency API
+
+---
+
 ## Getting Started
 
 Each project is self-contained with its own README. To run any project:
@@ -83,6 +101,7 @@ Each project is self-contained with its own README. To run any project:
 # Navigate to the project folder
 cd 0X-project-name
 
+6. **API integration & async** → Currency Converter
 # Install dependencies
 npm install
 
@@ -117,6 +136,7 @@ hola-react/
 ├── 02-counter/               # useState basics
 ├── 03-tailwind-props/        # Props and Tailwind
 ├── 04-bg-color-changer/      # Interactive state management
+├── 06-currency-converter/    # API integration & async
 ├── 05-password-generator/    # Advanced hooks
 └── README.md                 # This file
 ```
