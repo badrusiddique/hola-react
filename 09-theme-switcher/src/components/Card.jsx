@@ -1,8 +1,12 @@
+import { useThemeContext } from "../context/ThemeContextProvider";
+
 const Card = () => {
+    const { theme } = useThemeContext;
+
     return (
         <div className="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="/">
-                <img className="p-8 rounded-t-lg" src="https://picsum.photos/200/300" alt="product_image1" />
+                <img className="p-8 rounded-t-lg" src="https://images.unsplash.com/photo-1613520701290-480b81948f43?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D" alt="product_image1" />
             </a>
             <div className="px-5 pb-5">
                 <a href="/">
