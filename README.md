@@ -93,7 +93,7 @@ A collection of React learning projects progressing from basic concepts to advan
 
 ---
 
-### [07 React Router](./07-router)
+### [07 React Router](./07-react-router)
 **Concept**: Client-side routing and navigation in React applications
 
 **What you'll learn**:
@@ -109,6 +109,38 @@ A collection of React learning projects progressing from basic concepts to advan
 - Building multi-page applications with React
 
 **Tech**: React, Vite, React Router DOM, Tailwind CSS
+
+---
+
+### [08 Mini Context](./08-mini-context)
+**Concept**: Context API for global state management
+
+**What you'll learn**:
+- Creating and using React Context
+- Context Provider pattern
+- `useContext` hook for consuming context
+- Sharing state across component tree without props drilling
+- Building a simple authentication flow
+- Context vs props for state management
+- Managing global application state
+
+**Tech**: React, Vite, Tailwind CSS
+
+---
+
+### [09 Theme Switcher](./09-theme-switcher)
+**Concept**: Advanced Context API usage with theme management
+
+**What you'll learn**:
+- Building a complete theme system with Context API
+- Combining multiple context values and functions
+- Persisting theme state in localStorage
+- Dark mode implementation
+- Dynamic CSS class switching
+- Context best practices
+- Real-world state management patterns
+
+**Tech**: React, Vite, Tailwind CSS
 
 ---
 
@@ -140,6 +172,8 @@ The projects are ordered progressively:
 5. **Advanced hooks** → Password Generator
 6. **API integration & async** → Currency Converter
 7. **Client-side routing** → React Router
+8. **Context API basics** → Mini Context
+9. **Advanced Context usage** → Theme Switcher
 
 ## Technologies Used
 
@@ -159,7 +193,9 @@ hola-react/
 ├── 04-bg-color-changer/      # Interactive state management
 ├── 05-password-generator/    # Advanced hooks
 ├── 06-currency-converter/    # API integration & async
-├── 07-router/                # React Router & navigation
+├── 07-react-router/          # React Router & navigation
+├── 08-mini-context/          # Context API basics
+├── 09-theme-switcher/        # Advanced Context & theme management
 └── README.md                 # This file
 ```
 
