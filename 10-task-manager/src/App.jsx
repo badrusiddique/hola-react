@@ -33,7 +33,7 @@ function App() {
             <li className="flex items-center justify-between bg-gray-200 rounded-lg p-2 my-2 w-xl" key={key}>
               <div>
                 <input type="checkbox" className="m-2" checked={status === 'completed'} disabled={status === 'completed'} onChange={() => handleComplete(key)}></input>
-                <span className={`${status === 'completed' ? 'line-through' : ''} text-sm`}>{task} - {status}</span>
+                <span className={`${status === 'completed' ? 'line-through bg-green-400' : ''} text-sm`}>{task} - {status}</span>
               </div>
               <div>
                 <button className="hover:cursor-pointer bg-blue-300 p-1">✍️</button>
